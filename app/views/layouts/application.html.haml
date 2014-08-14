@@ -3,10 +3,10 @@
   %head
     %title WILT
     = stylesheet_link_tag    "application", media: "all"
-    = javascript_include_tag "application"
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js'
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.js'
+    = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %div{ 'ng-view' => '' }
+    %ng-view
       = yield
