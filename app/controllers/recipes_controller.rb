@@ -1,7 +1,10 @@
 class RecipesController < ApplicationController
-  respond_to :json
 
   def index
     @recipes = Recipe.all
+  end
+
+  def show
+    @recipe = Recipe.first
   end
 end

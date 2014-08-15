@@ -1,1 +1,6 @@
-Value of "foo": {{foo}}
+<ul ng-repeat="r in recipes">
+  <li ng-click="viewRecipe(r.id)">{{r.name}}</li>
+  <ul ng-repeat="st in r['steps']">
+    <li>{{st.name}}</li>
+  </ul>
+</ul>

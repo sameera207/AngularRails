@@ -24,7 +24,6 @@ gem 'haml-rails'
 gem 'angularjs-rails'
 gem 'rabl'
 gem 'oj'
-gem 'sprockets'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

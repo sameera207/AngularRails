@@ -1,3 +1,20 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+
+@recipe = angular.module('recipe', ['ngRoute'])
+
+@recipe.config(['$routeProvider','$locationProvider', ($routeProvider, $locationProvider) ->
+  $routeProvider.
+    when('/recipes',{
+      templateurl: '../templates/home.html',
+      controller: 'RecipeCtrl'
+    }).
+    when('/recipes/:id',{
+      templateUrl: '../templates/recipes/show.html',
+      controller: 'RecipeShowCtrl'
+    }).
+    otherwise({
+      templateUrl: '../templates/home.html',
+      controller: 'RecipeCtrl'
+    })
+  $locationProvider.html5Mode(true).hashPrefix('!')
+])
+
