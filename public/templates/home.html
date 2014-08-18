@@ -4,3 +4,14 @@
     <li>{{st.name}}</li>
   </ul>
 </ul>
+
+<ul ng-repeat="a in recipes">
+  <li>
+    <partial name='a'></partial>
+  </li>
+</ul>
+
+<div ng-click="searchRecipe()">
+  Search </div>
+
+<div data-ng-include data-src="'templates/recipe.html'" ng-animate="{enter: 'enter', leave: 'leave'}"></div>

@@ -18,3 +18,10 @@
   $locationProvider.html5Mode(true).hashPrefix('!')
 ])
 
+@recipe.directive 'partial', ->
+  restrict: "E"
+  scope:
+    name:'='
+  templateUrl: '../templates/partial.html'
+
+  

@@ -5,6 +5,10 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.first
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def search
+    @recipes = [Recipe.first]
   end
 end

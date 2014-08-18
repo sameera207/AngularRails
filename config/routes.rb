@@ -5,7 +5,11 @@ RecipeApp::Application.routes.draw do
   # You can have the root of your site routed with "root"
 
   root 'recipes#index'
-  resources :recipes
+  resources :recipes do
+    collection do
+      get 'search'
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
